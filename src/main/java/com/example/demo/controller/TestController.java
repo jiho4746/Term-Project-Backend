@@ -30,11 +30,11 @@ public class TestController {
 
     @GetMapping("/testRequestBody")
     public String testControllerRequestBody(@RequestBody TestRequestBodyDTO testRequestBodyDTO){
-        return "Hello World! 박지호" + testRequestBodyDTO.getId() + "Message : " +
+        return "Hello World! 박지호, id: " + testRequestBodyDTO.getId() + ", Message : " +
                 testRequestBodyDTO.getMessage();
     }
 
-    @GetMapping("/testRequestBody")
+    @GetMapping("/testResponseBody")
     public ResponseDTO<String> testControllerRequestBody(){
         List<String> list = new ArrayList<>();
         list.add("pjh1");
