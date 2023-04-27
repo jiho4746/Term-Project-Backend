@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.example.shoppingmall.controller;
 
-import com.example.demo.dto.ResponseDTO;
-import com.example.demo.dto.TestRequestBodyDTO;
+import com.example.shoppingmall.dto.ResponseDTO;
+import com.example.shoppingmall.dto.TestRequestBodyDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
