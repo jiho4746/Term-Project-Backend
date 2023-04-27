@@ -1,34 +1,28 @@
-package com.example.demo.service;
+package com.example.shoppingmall.service;
 
-import com.example.demo.dto.ResponseDTO;
-import com.example.demo.dto.TodoDTO;
-import com.example.demo.model.TodoEntity;
-import com.example.demo.persistence.TodoRepository;
+import com.example.shoppingmall.model.BookEntity;
+import com.example.shoppingmall.persistence.BookRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 
 @Slf4j
 @Service
-public class TodoService {
+public class BookService {
+    //TodoRepository 인터페이스를 구현한 클래스를 스프링 데이터 JPA가 자동으로 만들고,객체가 자동으로 주입됨
     @Autowired
-    private TodoRepository repository;
+    private BookRepository repository;
     public String testService(){
-        //return "Test Service";
-        TodoEntity entity = TodoEntity.builder().title("My first todo item").build();
-        repository.save(entity);
-        TodoEntity savedEntity = repository.findById(entity.getId()).get();
+        BookEntity entity = BookEntity.builder().title("My first Book item").build(); //BookEntity 생성
+        repository.save(entity); //BookEntity 저장
+        BookEntity savedEntity = repository.findById(entity.getId()).get(); //리포지터리에서 검색
         return savedEntity.getTitle();
     }
-    public List<TodoEntity> create(final TodoEntity entity){
+    public List<BookEntity> create(final BookEntity entity){
 
         validate(entity);
         repository.save(entity);
@@ -36,7 +30,7 @@ public class TodoService {
         return repository.findByUserId(entity.getUserId());
     }
     //리팩토링한 메서드
-    private static void validate(TodoEntity entity) {
+    private static void validate(BookEntity entity) {
         if (entity ==null){
             log.warn("Entity cannot be null.");
             throw new RuntimeException("Entity cannot be null");
@@ -46,13 +40,13 @@ public class TodoService {
             throw new RuntimeException("Unkown user");
         }
     }
-    public List<TodoEntity>retrieve(final String userId){
+    public List<BookEntity>retrieve(final String userId){
         return repository.findByUserId(userId);
     }
 
-    public List<TodoEntity>update(final TodoEntity entity){
+    public List<BookEntity>update(final BookEntity entity){
         validate(entity);
-        final Optional<TodoEntity> original = repository.findById(entity.getId());
+        final Optional<BookEntity> original = repository.findById(entity.getId());
         original.ifPresent(todo -> {
             todo.setTitle(entity.getTitle());
             todo.setDone(entity.isDone());
@@ -60,7 +54,7 @@ public class TodoService {
         });
         return retrieve(entity.getUserId());
     }
-    public List<TodoEntity>delete(final TodoEntity entity){
+    public List<BookEntity>delete(final BookEntity entity){
         validate(entity);
 
         try{

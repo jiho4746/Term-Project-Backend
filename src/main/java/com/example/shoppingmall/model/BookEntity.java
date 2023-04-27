@@ -16,11 +16,11 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "Todo")
+@Table(name = "Book")
 
-public class TodoEntity {
+public class BookEntity {
     @Id
-    @GeneratedValue(generator = "system-uuid")
+    @GeneratedValue(generator = "system-uuid") //ID를 자동으로 생성하겠다는 의미
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String userId;
