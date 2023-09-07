@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.example.shoppingmall.dto;
 import lombok.Data;
 
 @Data
