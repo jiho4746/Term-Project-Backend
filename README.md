@@ -1,4 +1,4 @@
-웹프로그래밍응용 텀프로젝트
+쇼핑몰 웹 응용 프로그램 개발
 ---
 ### 📍 텀프로젝트 1 : [실행 영상](https://drive.google.com/file/d/17qXIXOidqwLhRZi2v-OFKUNuwDk2giXx/view?usp=drive_link)
 
@@ -27,7 +27,7 @@
 - ResponseEntity의 응답 바디에는 ResponseDTO를 전달할 것
 - ResponseDTO는 data와 error 속성을 가짐
 ---
-### 📍 텀프로젝트 2 : [실행 영상]([https://drive.google.com/file/d/17qXIXOidqwLhRZi2v-OFKUNuwDk2giXx/view?usp=drive_link](https://drive.google.com/file/d/1JLgnZXBjnoPwShQ9QkmrYXQ_W_betru6/view?usp=drive_link))
+### 📍 텀프로젝트 2 : [실행 영상](https://drive.google.com/file/d/1JLgnZXBjnoPwShQ9QkmrYXQ_W_betru6/view?usp=drive_link)
 
 **1. 프론트엔드 서비스 구현 및 백엔드 서비스와 연결**
 - 현재 제품 리스트를 보여주는 UI 제공
@@ -40,4 +40,18 @@
 - 반드시 SPA(Single Page Application)으로 구현한다.
 - React.js 라이브러리를 이용하여 구현한다.
 - material ui는 꼭 사용하지 않아도 된다.
+---
+### 📍 텀프로젝트 3 : [실행 영상](https://drive.google.com/file/d/1AxQbPt1rs0bb_Fp96rlAvFnt7tHttU-T/view?usp=drive_link)
 
+**1. 백엔드에 인증 기능 구현**
+- JWT 방식의 인증, 필터 등 이용
+- 구현해야 하는 기능: 계정 생성 기능(sign up), 로그인 기능(sign in), 모든 기능(추가, 검색, 수정, 삭제) 요청 시 토큰 유효한지 검사하는 기능
+
+**2. 프론트엔드에 인증 기능 구현**
+- 백엔드로 요청 시 로컬 스토리지에 저장된 토큰을 요청 헤더에 담아서 요청함
+- 구현해야 하는 기능: 로그인 기능 / 계정 생성 기능, 백엔드에 제품 정보 (추가, 검색, 수정, 삭제) 요청 시 요청 헤더에 토큰 추가
+
+**3. 프론트엔드 GUI 개선**
+- 제품 정보 추가, 검색, 수정, 삭제를 위한 메뉴 항목 제공
+- 각 메뉴 항목을 선택하면 해당 UI가 출력됨
+- 화면 맨 아래쪽에는 현재 DB의 내용을 보여주는 테이블이 항상 존재함
