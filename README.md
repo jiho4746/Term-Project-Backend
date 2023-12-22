@@ -1,6 +1,6 @@
 웹프로그래밍응용 텀프로젝트
 ---
-### 📍 텀프로젝트 1 : https://drive.google.com/file/d/17qXIXOidqwLhRZi2v-OFKUNuwDk2giXx/view?usp=sharing
+### 📍 텀프로젝트 1 : [실행 영상](https://drive.google.com/file/d/17qXIXOidqwLhRZi2v-OFKUNuwDk2giXx/view?usp=drive_link)
 
 **1. 프로젝트 요약**
 - 쇼핑몰 웹 응용 프로그램 개발
@@ -26,3 +26,18 @@
 - 클라이언트로의 모든 응답은 ResponseEntity를 이용할 것
 - ResponseEntity의 응답 바디에는 ResponseDTO를 전달할 것
 - ResponseDTO는 data와 error 속성을 가짐
+---
+### 📍 텀프로젝트 2 : [실행 영상]([https://drive.google.com/file/d/17qXIXOidqwLhRZi2v-OFKUNuwDk2giXx/view?usp=drive_link](https://drive.google.com/file/d/1JLgnZXBjnoPwShQ9QkmrYXQ_W_betru6/view?usp=drive_link))
+
+**1. 프론트엔드 서비스 구현 및 백엔드 서비스와 연결**
+- 현재 제품 리스트를 보여주는 UI 제공
+- 제품 정보 추가를 위한 UI 제공
+- 제품 검색을 위한 UI 제공
+- 제품 수정을 위한 UI 제공
+- 제품 삭제를 위한 UI 제공
+
+**2. 제한조건**
+- 반드시 SPA(Single Page Application)으로 구현한다.
+- React.js 라이브러리를 이용하여 구현한다.
+- material ui는 꼭 사용하지 않아도 된다.
+
